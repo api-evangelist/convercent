@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.convercent.com/hc/en-us/articles/205259429-Convercent-OData-
+api_style: odata
+authentication:
+  style: http-basic
+  detail: Convercent user name + password; Administrators/Moderators only.
+  ref: authentication/convercent-authentication.yml
+pagination:
+  style: odata-query
+  detail: >-
+    Standard OData server-driven paging and client query options ($top, $skip,
+    $filter, $select, $orderby, $expand) as supported by the OData v4 protocol.
+    Exact server page-size limits are not published.
+versioning:
+  style: uri-path
+  detail: OData service version in the path (v4, v5).
+  ref: lifecycle/convercent-lifecycle.yml
+formats:
+  - odata-json
+  - odata-atom
+idempotency:
+  supported: false
+  detail: No idempotency-key contract documented; read-oriented OData data export surface.
+rate_limiting:
+  documented: false
+error_envelope:
+  style: odata-error
+  detail: Standard OData error payload (code/message); no RFC 9457 problem+json documented.
+  ref: conformance/convercent-conformance.yml
+notes: >-
+  Convercent exposes read/reporting access to compliance data (cases, campaigns,
+  policy attestations, course completions) as OData feeds intended for BI/reporting
+  tools rather than a general-purpose REST write API.

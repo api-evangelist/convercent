@@ -1,0 +1,14 @@
+generated: '2026-07-18'
+method: searched
+host: https://www.convercent.com
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+    host: https://app.convercent.com
+  - path: /llms.txt
+    status: 404
+notes: >-
+  No /.well-known discovery documents or llms.txt were served (all 404) as of
+  2026-07-18 across www.convercent.com, convercent.com, and app.convercent.com.

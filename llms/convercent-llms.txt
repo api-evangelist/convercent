@@ -1,0 +1,29 @@
+# Convercent (by OneTrust)
+
+> Convercent is an enterprise ethics and compliance (GRC) SaaS platform — case/helpline management, policy attestations, campaigns/disclosures, and compliance training — now part of OneTrust with customers migrating to EQS Group. It exposes compliance reporting data through an OData data-services API for BI and reporting tools.
+
+## APIs
+- [Convercent OData data services](https://support.convercent.com/hc/en-us/articles/205259429-Convercent-OData-): OData v4/v5 feeds for case management, campaigns, policy attestations, and course completions. HTTP Basic auth (Administrators/Moderators only). Base: https://api.convercent.com/OData/
+
+## Services
+- Case Management (OData v5): https://api.convercent.com/OData/case/v5/CaseManagement.svc/
+- Campaign Service (OData v4): https://api.convercent.com/OData/v4/CampaignService.svc/
+
+## Docs
+- [OData data services guide](https://support.convercent.com/hc/en-us/articles/205259429-Convercent-OData-)
+- [Support / Knowledge Base](https://support.convercent.com/)
+- [Customer community (Converge)](https://converge.convercent.com/)
+- [Convercent by OneTrust resources](https://my.onetrust.com/s/convercent-by-onetrust-resources?language=en_US)
+
+## Operations
+- [Status page](https://status.convercent.com/) (Atlassian Statuspage)
+- [GDPR / data protection](https://www.convercent.com/products/gdpr)
+- [Privacy policy](https://www.convercent.com/privacy-policy)
+- [Legal](https://www.convercent.com/legal)
+
+## Repo artifacts
+- authentication/convercent-authentication.yml — HTTP Basic auth profile
+- conformance/convercent-conformance.yml — OData/SAML/GDPR conformance
+- conventions/convercent-conventions.yml — OData query/paging conventions
+- lifecycle/convercent-lifecycle.yml — versioning + status page
+- security/convercent-domain-security.yml — TLS/SPF/DMARC probe

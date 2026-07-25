@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://support.convercent.com/hc/en-us/articles/205259429-Convercent-OData-
+standards:
+  - id: odata-v4
+    conforms: true
+    evidence: >-
+      Data services are exposed as OData feeds (e.g.
+      https://api.convercent.com/OData/v4/CampaignService.svc/ and
+      https://api.convercent.com/OData/case/v5/CaseManagement.svc/), consumable
+      by any OData-capable reporting/BI client. Versioned OData service
+      documents (v4 / v5) are published under api.convercent.com/OData/.
+  - id: http-basic-auth
+    conforms: true
+    evidence: OData endpoints authenticate via HTTP Basic (RFC 7617) with Convercent credentials.
+  - id: saml2-sso
+    conforms: true
+    evidence: >-
+      Application sign-in supports SAML 2.0 SSO via identity providers (Okta, F5
+      APM integration guides published). Governs the web app, not the OData API.
+  - id: gdpr
+    conforms: true
+    evidence: Convercent publishes a GDPR data-protection page (https://www.convercent.com/products/gdpr).
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth2 surface documented for the data API.
+  - id: openapi
+    conforms: false
+    evidence: No OpenAPI/Swagger description published; the API is described as OData service documents.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No problem+json error contract published.

@@ -1,8 +1,27 @@
 aid: convercent
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/convercent.png
 name: Convercent
-description: 'Convercent is a company surfaced as a portfolio company of sapphire-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: saas. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Convercent (now "Convercent by OneTrust") is an enterprise ethics and compliance
+  GRC SaaS platform providing case and helpline management, policy management and
+  attestations, compliance training and learning, campaigns, disclosures, and an
+  interactive code of conduct. Acquired by OneTrust in 2021, its customer base is
+  being migrated to EQS Group. Convercent exposes compliance reporting data through
+  an OData data-services API (v4/v5) covering case management, campaigns, policy
+  attestations, and course completions, authenticated with HTTP Basic and intended
+  for administrators/moderators to connect BI and reporting tools.
 url: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +31,38 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Saas
-apis: []
+- Compliance
+- Governance Risk And Compliance
+- Ethics
+- Case Management
+- OData
+- Reporting
+apis:
+- name: Convercent OData Data Services
+  description: >-
+    OData v4/v5 data-services API exposing Convercent compliance data (case
+    management, campaigns, policy attestations, course completions) for BI and
+    reporting tools. Authenticated with HTTP Basic; access limited to
+    Administrators and Moderators.
+  humanURL: https://support.convercent.com/hc/en-us/articles/205259429-Convercent-OData-
+  baseURL: https://api.convercent.com/OData/
+  tags:
+  - OData
+  - Reporting
+  - Compliance
+  properties:
+  - type: Documentation
+    url: https://support.convercent.com/hc/en-us/articles/205259429-Convercent-OData-
+  - type: Authentication
+    url: authentication/convercent-authentication.yml
+  - type: Conventions
+    url: conventions/convercent-conventions.yml
+  - type: Conformance
+    url: conformance/convercent-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +71,36 @@ maintainers:
 common:
 - type: Website
   url: https://www.convercent.com/
+- type: Documentation
+  url: https://support.convercent.com/hc/en-us/articles/205259429-Convercent-OData-
+- type: Support
+  url: https://converge.convercent.com/
+- type: HelpCenter
+  url: https://support.convercent.com/
+- type: Login
+  url: https://app.convercent.com/
+- type: StatusPage
+  url: https://status.convercent.com/
+- type: PrivacyPolicy
+  url: https://www.convercent.com/privacy-policy
+- type: TermsOfService
+  url: https://www.convercent.com/legal
+- type: Compliance
+  url: https://www.convercent.com/products/gdpr
+- type: Authentication
+  url: authentication/convercent-authentication.yml
+- type: Conventions
+  url: conventions/convercent-conventions.yml
+- type: Conformance
+  url: conformance/convercent-conformance.yml
+- type: Lifecycle
+  url: lifecycle/convercent-lifecycle.yml
+- type: DomainSecurity
+  url: security/convercent-domain-security.yml
+- type: LLMsTxt
+  url: llms/convercent-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

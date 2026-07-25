@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://status.convercent.com/
+versioning:
+  scheme: uri-path
+  observed_versions: [v4, v5]
+  docs: https://api.convercent.com/OData/
+  notes: >-
+    OData service versions appear in the URI path (e.g. /OData/v4/CampaignService.svc/,
+    /OData/case/v5/CaseManagement.svc/). No formal public deprecation/versioning
+    policy document is published.
+status_page: https://status.convercent.com/
+status_page_provider: Atlassian Statuspage
+environments:
+  - name: US Production
+  - name: EU Production
+  - name: US Trial
+  - name: EU Trial
+  - name: Convercent Helpline Call Center
+ownership:
+  note: >-
+    Convercent was acquired by OneTrust (2021) and now operates as "Convercent by
+    OneTrust"; customers are being migrated to EQS Group. The convercent.com
+    product surface and status page remain live as of 2026-07.
+deprecation:
+  policy_url: null
+  sunset_header: false
